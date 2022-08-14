@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-
+import Navbar from '../pages/Navbar/Navbar'
+import Slider from '../pages/Slider/Slider'
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -12,7 +13,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className='text-3xl text-center text-secondary font-bold'>Home Page</h1>
+        <Navbar></Navbar>
+        <Slider></Slider>
       </main>
 
       
