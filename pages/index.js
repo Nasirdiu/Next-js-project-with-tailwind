@@ -1,8 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Navbar from '../pages/Navbar/Navbar'
-import Slider from '../pages/Slider/Slider'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import Navbar from "../pages/Navbar/Navbar";
+import Slider from "../pages/Slider/Slider";
+import Card from "../pages/Card/Card";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -15,9 +16,8 @@ export default function Home() {
       <main>
         <Navbar></Navbar>
         <Slider></Slider>
+        <Card></Card>
       </main>
-
-      
     </div>
-  )
+  );
 }
