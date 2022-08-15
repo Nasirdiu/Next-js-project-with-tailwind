@@ -2,6 +2,7 @@ import Head from "next/head";
 import React from "react";
 import Footer from "./Footer/Footer";
 import Navbar from "./Navbar/Navbar";
+import Product from "./Product/Product";
 import Slider from "./Slider/Slider";
 const Layout = ({ children }) => {
   return (
@@ -19,6 +20,9 @@ const Layout = ({ children }) => {
           <main>
             {children}
             <Slider />
+            <div>
+                <Product></Product>
+            </div>
           </main>
         </div>
         <footer>
@@ -30,3 +34,11 @@ const Layout = ({ children }) => {
 };
 
 export default Layout;
+export async function getStaticProps(context) {
+    const res = await fetch("https://jsonplaceholder.typicode.com/users");
+    const data = await res.json();
+    return {
+      props: {users:data}, // will be passed to the page component as props
+    };
+  }
+  
